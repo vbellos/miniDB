@@ -60,5 +60,6 @@ The database wil be save with the name `smdb`. You can load the database in a se
 
 ## MiniDB Contributors
 George S. Theodoropoulos, Yannis Kontoulis, Yannis Theodoridis; Data Science Lab., University of Piraeus.
+
 ##Addon Contributors
 Vaggelis Bellos,Liana Tymplalexi,Lydia Bellonia
