@@ -34,6 +34,11 @@ Installation instructions for non-Linux users can be found [here](https://graphv
 
 The file [documentation.pdf](documentation.pdf) contains a detailed description of the miniDB library (in Greek).
 
+##Server Queries:
+SELECT COL1,COL2,COLn FROM TABLE
+SELECT * FROM TABLE
+INSERT INTO TABLE VALUES(VAL1,VAL2,VALn)
+
 ## Loading the [smallRelations database](https://www.db-book.com/db6/lab-dir/sample_tables-dir/index.html)
 
 To create a database containing the smallRelations tables and get an interactive shell, run
@@ -50,5 +55,10 @@ The database wil be save with the name `smdb`. You can load the database in a se
 >> db = Database("smdb", load=True)
 ```
 
-## Contributors
+
+
+
+## MiniDB Contributors
 George S. Theodoropoulos, Yannis Kontoulis, Yannis Theodoridis; Data Science Lab., University of Piraeus.
+##Addon Contributors
+Vaggelis Bellos,Liana Tymplalexi,Lydia Bellonia
