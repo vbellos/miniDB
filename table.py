@@ -291,7 +291,7 @@ class Table:
         Join table (left) with a supplied table (right) where condition is met.
         '''
         # get columns and operator
-        column_name_left, operator, column_name_right = self._parse_condition(condition, join=True)
+        column_name_left, operator, column_name_right = self._parse_condition(condition, both_columns=True)
         # try to find both columns, if you fail raise error
         try:
             column_index_left = self.column_names.index(column_name_left)
@@ -375,5 +375,30 @@ class Table:
         f = open(filename, 'rb')
         tmp_dict = pickle.load(f)
         f.close()
+   #EDITTED
+    def Get_show(self, no_of_rows=None, is_locked=False):
+        '''
+        Get String of the table
+        '''
+        
+        # if the table is locked, add locked keyword to title
+        if is_locked:
+           s_tab = (f"\n## {self._name} (locked) ## ")
+           return s_tab 
+        else:
+            s_tab = (f"\n## {self._name} ## \n")
 
+        # headers -> "column name (column type)"
+        headers = [f'{col} ({tp.__name__})' for col, tp in zip(self.column_names, self.column_types)]
+        if self.pk_idx is not None:
+            # table has a primary key, add PK next to the appropriate column
+            headers[self.pk_idx] = headers[self.pk_idx]+' #PK#'
+        # detect the rows that are no tfull of nones (these rows have been deleted)
+        # if we dont skip these rows, the returning table has empty rows at the deleted positions
+        non_none_rows = [row for row in self.data if any(row)]
+        # print using tabulate
+        s_tab = s_tab + tabulate(non_none_rows[:no_of_rows], headers=headers)+'\n'
+        
+        return s_tab     
+   
         self.__dict__.update(tmp_dict)

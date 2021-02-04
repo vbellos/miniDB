@@ -328,7 +328,10 @@ class Database:
             if return_object:
                 return table
             else:
-                table.show()
+            #EDITTED
+                #table.show()
+                a_string = table.Get_show()
+                return a_string
 
     def show_table(self, table_name, no_of_rows=None):
         '''
