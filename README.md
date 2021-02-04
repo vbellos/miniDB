@@ -9,34 +9,20 @@ The miniDB project is a minimal and easy to expand and develop for RMDBS tool, w
 Python 3.7 or newer is needed. To download and build the project run:
 
 ```bash
-git clone https://github.com/DataStories-UniPi/miniDB.git
+git clone https://github.com/vbellos/miniDB.git
 cd miniDB
 pip install -r requirements.txt
 ```
-
-The last command will install the packages found in [`requirements.txt`](https://github.com/DataStories-UniPi/miniDB/blob/master/requirements.txt). MiniDB is based on the following dependencies:
-* `tabulate` (for text formatting)
-* `graphviz` (for graph visualizations; optional)
-* `matplotlib` (for plotting; optional)
-
-Alternatively, the above dependencies can be installed with the following command:
-```python
-pip install tabulate graphviz matplotlib
-```
-
-Linux users can optionally install the `Graphviz` package to visualize graphs:
-```bash
-sudo apt-get install graphviz
-```
-Installation instructions for non-Linux users can be found [here](https://graphviz.org/download/).
-
 ## Documentation
 
 The file [documentation.pdf](documentation.pdf) contains a detailed description of the miniDB library (in Greek).
 
 ##Server Queries:
+
 SELECT COL1,COL2,COLn FROM TABLE
+
 SELECT * FROM TABLE
+
 INSERT INTO TABLE VALUES(VAL1,VAL2,VALn)
 
 ## Loading the [smallRelations database](https://www.db-book.com/db6/lab-dir/sample_tables-dir/index.html)
