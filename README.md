@@ -18,28 +18,14 @@ pip install -r requirements.txt
 The file [documentation.pdf](documentation.pdf) contains a detailed description of the miniDB library (in Greek).
 
 ##Server Queries:
-
+```
 SELECT COL1,COL2,COLn FROM TABLE
 
 SELECT * FROM TABLE
 
 INSERT INTO TABLE VALUES(VAL1,VAL2,VALn)
+```
 
-## Loading the [smallRelations database](https://www.db-book.com/db6/lab-dir/sample_tables-dir/index.html)
-
-To create a database containing the smallRelations tables and get an interactive shell, run
-``` Python
-python -i smallRelationsInsertFile.py
-```
-You can the access the database through the db object that will be available. For example, you can show the contents of the student table by running the following command:
-```python
->> db.show_table('student')
-```
-The database wil be save with the name `smdb`. You can load the database in a separate Python shell by running the following commands:
-```python
->> from database import Database
->> db = Database("smdb", load=True)
-```
 
 
 
