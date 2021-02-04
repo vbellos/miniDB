@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 The file [documentation.pdf](documentation.pdf) contains a detailed description of the miniDB library (in Greek).
 
-##Server Queries:
+## Server Queries:
 ```
 SELECT COL1,COL2,COLn FROM TABLE
 
@@ -27,11 +27,8 @@ INSERT INTO TABLE VALUES(VAL1,VAL2,VALn)
 ```
 
 
-
-
-
 ## MiniDB Contributors
 George S. Theodoropoulos, Yannis Kontoulis, Yannis Theodoridis; Data Science Lab., University of Piraeus.
 
-##Addon Contributors
+## Addon Contributors
 Vaggelis Bellos,Liana Tymplalexi,Lydia Bellonia
